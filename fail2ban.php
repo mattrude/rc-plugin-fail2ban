@@ -15,9 +15,8 @@ class fail2ban extends rcube_plugin
 
   function log($args)
   {
-    $log_entry = 'roundcube failed login attempt, username=' .$args['user']. ' - ip-address=' .getenv('REMOTE_ADDR'); 
-    error_log($log_entry, 0);
-
+    $log_entry = 'failed login attempt - username=' .$args['user']. ' - ip-address=' .getenv('REMOTE_ADDR'); 
+    syslog(LOG_WARNING, $log_entry);
   }
 
 }
