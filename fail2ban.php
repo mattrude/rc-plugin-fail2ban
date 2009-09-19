@@ -3,8 +3,8 @@
  * RoundCube Fail2Ban Plugin
  *
  * @version 1.0
- * @author Matt Rude [matt@mattrude.com]
- * @url http://www.mattrude.com/roundcube-fail2ban-plugin
+ * @author Matt Rude [m@mattrude.com]
+ * @url http://mattrude.com/plugins/roundcube-fail2ban-plugin/
  */
 class fail2ban extends rcube_plugin
 {
