@@ -1,80 +1,129 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+    <HEAD>
+        <META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <TITLE>wp-reCAPTCHA Form</TITLE>
+        <LINK href="common.css" rel="stylesheet" type="text/css">
+        <LINK rel="shortcut icon" href="images/favicon.ico">
+    </HEAD>
+    <BODY>
+        <A name="top"></A>
+        <DIV id="container">
+            <DIV id="header">
+            </DIV><!-- header -->
+            <DIV id="content">
+                <DIV id="leftColumn">
+                    <DIV id="navigation">
+                         <H5><A name="Index"></A>Index</H5>
+                             <UL>
+	                         <LI><A href="#Description" title="Description">Description</A></LI>
+	                         <LI><A href="#Download" title="Download">Download</A></LI>
+	                         <LI><A href="#Dependencies" title="Dependencies">Dependencies</A></LI>
+	                         <LI><A href="#Install" title="Install">Install</A></LI>
+	                         <LI><A href="#Setup" title="Setup">Setting Up</A></LI>
+	                         <LI><A href="#License" title="License">License</A></LI>
+	                         <LI><A href="#Author" title="Author">Author</A></LI>
+                             </UL>
+			   <H5>
+			   <script>
+			     var idcomments_acct = '4f5b5827534ac8f56be532bc26aab3bf';
+			     var idcomments_post_id;
+			     var idcomments_post_url;
+			   </script>
+			 <script type="text/javascript" src="http://www.intensedebate.com/js/genericLinkWrapperV2.js"></script>
+			 </H5>
+                    </DIV><!-- navigation -->
+                </DIV><!-- leftColumn -->
+                <DIV id="rightColumn">
+		    <h1>wp-reCAPTCHA Form</h1> 
+		    <div class="description"> 
+		      <p>This is a small plugin that will display the failed login attempts to your syslog or userlogins log file.</p>
+			
+		      <p>If you would like to help translating this plugin, or you see a problem with the current translation, please <a href="http://mattrude.com/contact-me/" >contact me</a>.</p> 
+		    </div> 
+		
+		    <br>
+		    <a id=Download name=Download></a>
+		    <h2>Download</h2> 
+		    <p>The Current Version is 1.0 released on September, 19th 2009.</p>
+		    <ul> 
+			<li><a href="http://github.com/mattrude/rc-plugin-fail2ban/tarball/1.0">rc-Plugin Fil2Ban &#8211; Version 1.0</a></li> 
+</ul>
+		    <p>You can also clone the project with <a href="http://git-scm.com">Git</a> by running:
+		      <pre>$ git clone git://github.com/mattrude/rc-plugin-fail2ban.git</pre> 
+                      If your using git, make sure to hit the <a href="http://github.com/mattrude/rc-plugin-fail2ban">rc-Plugin-Fail2Ban's github page</a>.
+		    </p> 
 
-	<title>mattrude/rc-plugin-fail2ban @ GitHub</title>
-	
-	<style type="text/css">
-		body {
-  		margin-top: 1.0em;
-  		background-color: #a0c25f;
-		  font-family: "Helvetica,Arial,FreeSans"; 
-  		color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-		h1 { font-size: 3.8em; color: #5f3da0; margin-bottom: 3px; }
-		h1 .small { font-size: 0.4em; }
-		h1 a { text-decoration: none }
-		h2 { font-size: 1.5em; color: #5f3da0; }
-    h3 { text-align: center; color: #5f3da0; }
-    a { color: #5f3da0; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-		pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-	</style>
-	
-</head>
+		    <br>
+		    <a id=Dependencies name=Dependencies></a>
+		    <h2>Dependencies</h2> 
+		    <p><a href="http://roundcube.net/">WordPress</a> 3.0+</p> 
 
-<body>
-  <a href="http://github.com/mattrude/rc-plugin-fail2ban"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-  
-  <div id="container">
+		    <br>
+		    <a id=Install name=Install></a>
+		    <h2>Installing</h2> 
+		    <ol> 
+			<li>Place this plugin folder into the RoundCube plugins directory (roundcube/plugins/)</li> 
+			<li>Add fail2ban to $rcmail_config['plugins'] in your RoundCube config</li> 
+		    </ol>
+			<p><strong>Note:</strong> When downloading this plugin from <a href="http://github.com/mattrude/rc-plugin-fail2ban">http://github.com/mattrude/rc-plugin-fail2ban</a> you will need to create a directory called fail2ban and place fail2ban.php in there, ignoring the root directory in the downloaded archive.  You may also run '<strong>git clone git://github.com/mattrude/rc-plugin-fail2ban.git fail2ban</strong>' from the plugins directory.</p>
+		    <br>
+		    <a id=Setup name=Setup></a>
+		    <h2>Setting Up</h2> 
+		    <p><strong>fail2ban/jail.conf:</strong></p> 
+<pre>[roundcube]
+enabled  = true
+port     = http,https
+filter   = roundcube
+action   = iptables-multiport[name=roundcube, port="http,https"]
+logpath  = /var/www/html/roundcube/logs/userlogins</pre> 
+<p>Or oldschool  used a configuration simmiler to:</p> 
+<pre>[roundcube]
+# 0.3 and up plugin-support
+ 
+enabled  = true
+port     = http,https
+filter   = roundcube
+action   = iptables-multiport[name=roundcube, port="http,https"]
+sendmail-whois[name=RC-Webmail, dest=you@example.com, sender=fail2ban]
+logpath  = /srv/www/htdocs/webmail/logs/userlogins</pre> 
+<p><strong>fail2ban/filter.d/roundcube.conf:</strong></p> 
+<pre>[Definition]
+failregex = FAILED login for .*. from &lt;HOST&gt;
+ignoreregex =</pre> 
+		    <br>
+		    <a id=License name=License></a>
+		    <h2>License</h2> 
+		    <p>This plugin is licensed under the <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPLv2</a>.  A copy of the license also comes with every copy download.</p> 
+                    <code>
+GNU GENERAL PUBLIC LICENSE<br />
+Version 2, June 1991<br />
+<br />
+Copyright (C) 1989, 1991 Free Software Foundation, Inc. <br />
+51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA <br />
+<br />
+Everyone is permitted to copy and distribute verbatim copies <br />
+of this license document, but changing it is not allowed. <br />
+		    </code>
 
-    <div class="download">
-      <a href="http://github.com/mattrude/rc-plugin-fail2ban/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/mattrude/rc-plugin-fail2ban/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
-      
-    <h1><a href="http://github.com/mattrude/rc-plugin-fail2ban">rc-plugin-fail2ban</a> 
-      <span class="small">by <a href="http://github.com/mattrude">mattrude</a></span></h1>
-
-    <div class="description">
-      A Fail2Ban RoundCube plugin
-    </div>
-
-    <h2>Authors</h2>
-<p>Matt Rude (github@mattrude.com)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Matt Rude (github@mattrude.com)<br/>      </p>
-
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/mattrude/rc-plugin-fail2ban/zipball/master">zip</a> or
-      <a href="http://github.com/mattrude/rc-plugin-fail2ban/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/mattrude/rc-plugin-fail2ban</pre>
-    </p>
-      
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/mattrude/rc-plugin-fail2ban">mattrude/rc-plugin-fail2ban</a>
-    </div>
-    
-  </div>
-
-  
-</body>
-</html>
+		    <br>
+		    <a id=Authors name=Authors></a>
+		    <h2>Authors</h2> 
+		    <p><a href="http://mattrude.com/">Matt Rude</a> &lt;<a href="mailto:m@mattrude.com">m@mattrude.com</a>&gt;<br/></p> 
+		    <br>
+		    <script>
+		      var idcomments_acct = '4f5b5827534ac8f56be532bc26aab3bf';
+		      var idcomments_post_id;
+		      var idcomments_post_url;
+		    </script>
+		    <span id="IDCommentsPostTitle" style="display:none"></span>
+		    <script type='text/javascript' src='http://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+                </DIV><!-- rightColumn -->
+                <DIV id="endContent"></DIV>
+            </DIV><!-- content -->
+            <DIV id="footer">Copyright &copy; 2009-2010 by <A href="http://mattrude.com/">Matt Rude</A>, All Rights Reserved. <br />
+		<small>last updated: 08-24-2010</small></DIV>
+        </DIV><!-- container -->
+    </BODY>
+</HTML>
