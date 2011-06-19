@@ -2,7 +2,7 @@
 /**
  * RoundCube Fail2Ban Plugin
  *
- * @version 1.0
+ * @version 1.1
  * @author Matt Rude [m@mattrude.com]
  * @url http://mattrude.com/plugins/roundcube-fail2ban-plugin/
  * @license GPLv3

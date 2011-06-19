@@ -1,8 +1,9 @@
 RoundCube Fail2Ban Plugin
 =========================
 
-* Version: 1.0 (2009-Jul-10)
+* Version: 1.1 (2011-Jun-19)
 * Plugin Website: http://mattrude.com/projects/roundcube-fail2ban-plugin/
+* Source Website: https://github.com/mattrude/rc-plugin-fail2ban/tree/
 * Author: Matt Rude [m@mattrude.com]
 * Author Website: http://mattrude.com
 * License: GPLv3
