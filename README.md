@@ -1,11 +1,11 @@
-
 RoundCube Fail2Ban Plugin
+=========================
 
-Version: 1.0 (2009-Jul-10)
-Plugin Website: http://mattrude.com/plugins/roundcube-fail2ban-plugin
-Author: Matt Rude [m@mattrude.com]
-Author Website: http://mattrude.com
-License: GPLv2
+* Version: 1.0 (2009-Jul-10)
+* Plugin Website: http://mattrude.com/plugins/roundcube-fail2ban-plugin
+* Author: Matt Rude [m@mattrude.com]
+* Author Website: http://mattrude.com
+* License: GPLv3
 
 This is a small plugin that will display the failed login attempts to your syslog or userlogins log file.
 
