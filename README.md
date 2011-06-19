@@ -29,3 +29,7 @@ fail2ban/filter.d/roundcube.conf:
   [Definition]
   failregex = FAILED login for .*. from <HOST>
   ignoreregex =
+
+License
+=======
+GNU General Public License, Version 3
