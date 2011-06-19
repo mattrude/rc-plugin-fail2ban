@@ -5,6 +5,7 @@
  * @version 1.0
  * @author Matt Rude [m@mattrude.com]
  * @url http://mattrude.com/plugins/roundcube-fail2ban-plugin/
+ * @license GPLv3
  */
 class fail2ban extends rcube_plugin
 {
