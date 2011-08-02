@@ -21,17 +21,17 @@ Note: When downloading this plugin from http://github.com/mattrude/rc-plugin-fai
 Fail2Ban Setup
 ==============
 fail2ban/jail.conf:
-  [roundcube]
-  enabled  = true
-  port     = http,https
-  filter   = roundcube
-  action   = iptables-multiport[name=roundcube, port="http,https"]
-  logpath  = /var/www/html/roundcube/logs/userlogins
+    [roundcube]
+    enabled  = true
+    port     = http,https
+    filter   = roundcube
+    action   = iptables-multiport[name=roundcube, port="http,https"]
+    logpath  = /var/www/html/roundcube/logs/userlogins
 
 fail2ban/filter.d/roundcube.conf:
-  [Definition]
-  failregex = FAILED login for .*. from <HOST>
-  ignoreregex =
+    [Definition]
+    failregex = FAILED login for .*. from <HOST>
+    ignoreregex =
 
 License
 =======
