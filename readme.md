@@ -12,8 +12,8 @@ This plugin dose not install or run Fail2Ban, but only provides the program with
 
 The Current Version is 1.1 released on June, 19th 2011.
 
-*   RoundCube Fil2Ban Plugin . Version 1.1 . [tgz][2] | [zip][3] | [git][4]
-*   RoundCube Fil2Ban Plugin . Version 1.0 . [tgz][5] | [zip][6] | [git][7]
+*   RoundCube Fil2Ban Plugin - Version 1.1 - [tgz][2] | [zip][3] | [git][4]
+*   RoundCube Fil2Ban Plugin - Version 1.0 - [tgz][5] | [zip][6] | [git][7]
 
 You can also clone the project with [Git][8] by running: 
 <pre>$ git clone git://github.com/mattrude/rc-plugin-fail2ban.git fail2ban</pre> If your using git, make sure to hit the 
