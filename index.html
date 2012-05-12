@@ -1,134 +1,32 @@
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<HTML>
-    <HEAD>
-        <META http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <TITLE>rc-Plugin Fail2Ban</TITLE>
-        <LINK href="common.css" rel="stylesheet" type="text/css">
-        <LINK rel="shortcut icon" href="favicon.ico">
-    </HEAD>
-    <BODY>
-        <A name="top"></A>
-        <DIV id="container">
-            <DIV id="header">
-            </DIV><!-- header -->
-            <DIV id="content">
-                <DIV id="leftColumn">
-                    <DIV id="navigation">
-                         <H5><a href="/"name="Site-Index">Site Index</a></H5>
-                         <H5><a name="Page-Index"></a>Page Index</H5>
-                             <UL>
-	                         <LI><A href="#Description" title="Description">Description</A></LI>
-	                         <LI><A href="#Download" title="Download">Download</A></LI>
-	                         <LI><A href="#Dependencies" title="Dependencies">Dependencies</A></LI>
-	                         <LI><A href="#Install" title="Install">Install</A></LI>
-	                         <LI><A href="#Setup" title="Setup">Setting Up</A></LI>
-	                         <LI><A href="#License" title="License">License</A></LI>
-	                         <LI><A href="#Author" title="Author">Author</A></LI>
-                             </UL>
-			   <H5>
-			   <script>
-			     var idcomments_acct = '4f5b5827534ac8f56be532bc26aab3bf';
-			     var idcomments_post_id;
-			     var idcomments_post_url;
-			   </script>
-			 <script type="text/javascript" src="http://www.intensedebate.com/js/genericLinkWrapperV2.js"></script>
-			 </H5>
-                    </DIV><!-- navigation -->
-                </DIV><!-- leftColumn -->
-                <DIV id="rightColumn">
-		    <h1> RoundCube's Fail2Ban Plugin</h1> 
-		    <div class="description"> 
-		      <p><strong>RoundCube Fail2Ban Plugin</strong> is a small plugin that will display a failed login attempts in your syslog or userlogins log file. Using this information <a href="http://www.fail2ban.org" target="_blank">Fail2Ban</a> will be able to block a user for a set amount of time.  The best part, the block is happening at the IP level and blocks the IP address, not the user they are trying to log in as.</p>
-			
-		      <p>If you would like to help translating this plugin, or you see a problem with the current translation, please <a href="http://mattrude.com/contact-me/" >contact me</a>.</p> 
-		      <p>This plugin dose not install or run Fail2Ban, but only provides the program with the needed log entries.  Fail2Ban needs to be setup and running independent of this plugin and will watch roundcube's logs for failed logins.</p>
-		    </div> 
-		
-		    <br>
-		    <a id=Download name=Download></a>
-		    <h2>Download</h2> 
-		    <p>The Current Version is 1.1 released on June, 19th 2011.</p>
-		    <ul> 
-			<li>RoundCube Fil2Ban Plugin &#8211; Version 1.1 &#8211; <a href="http://github.com/downloads/mattrude/rc-plugin-fail2ban/roundcube-fail2ban-plugin.1.1.tgz">tgz</a> | <a href="http://github.com/downloads/mattrude/rc-plugin-fail2ban/roundcube-fail2ban-plugin.1.1.zip">zip</a> | <a href="http://github.com/mattrude/rc-plugin-fail2ban/tree/1.1">git</a></li> 
-			<li>RoundCube Fil2Ban Plugin &#8211; Version 1.0 &#8211; <a href="http://github.com/downloads/mattrude/rc-plugin-fail2ban/roundcube-fail2ban-plugin.1.0.tgz">tgz</a> | <a href="http://github.com/downloads/mattrude/rc-plugin-fail2ban/roundcube-fail2ban-plugin.1.0.zip">zip</a> | <a href="http://github.com/mattrude/rc-plugin-fail2ban/tree/1.0">git</a></li> 
-</ul>
-		    <p>You can also clone the project with <a href="http://git-scm.com">Git</a> by running:
-		      <pre>$ git clone git://github.com/mattrude/rc-plugin-fail2ban.git fail2ban</pre> 
-                      If your using git, make sure to hit the <a href="http://github.com/mattrude/rc-plugin-fail2ban">rc-Plugin-Fail2Ban's github page</a>.
-		    </p> 
-
-		    <br>
-		    <a id=Dependencies name=Dependencies></a>
-		    <h2>Dependencies</h2> 
-		    <p><a href="http://roundcube.net/">RoundCube</a> 3.0+</p> 
-
-		    <br>
-		    <a id=Install name=Install></a>
-		    <h2>Installing</h2> 
-		    <ol> 
-			<li>Place this plugin folder into the RoundCube plugins directory (roundcube/plugins/)</li> 
-			<li>Add fail2ban to $rcmail_config['plugins'] in your RoundCube config</li> 
-		    </ol>
-			<p><strong>Note:</strong> When downloading this plugin from <a href="http://github.com/mattrude/rc-plugin-fail2ban">http://github.com/mattrude/rc-plugin-fail2ban</a> you will need to create a directory called fail2ban and place fail2ban.php in there, ignoring the root directory in the downloaded archive.  You may also run '<strong>git clone git://github.com/mattrude/rc-plugin-fail2ban.git fail2ban</strong>' from the plugins directory.</p>
-		    <br>
-		    <a id=Setup name=Setup></a>
-		    <h2>Setting Up</h2> 
-		    <p><strong>fail2ban/jail.conf:</strong></p> 
-<pre>[roundcube]
-enabled  = true
-port     = http,https
-filter   = roundcube
-action   = iptables-multiport[name=roundcube, port="http,https"]
-logpath  = /var/www/html/roundcube/logs/userlogins</pre> 
-<p>Or oldschool  used a configuration simmiler to:</p> 
-<pre>[roundcube]
-# 0.3 and up plugin-support
- 
-enabled  = true
-port     = http,https
-filter   = roundcube
-action   = iptables-multiport[name=roundcube, port="http,https"]
-sendmail-whois[name=RC-Webmail, dest=you@example.com, sender=fail2ban]
-logpath  = /srv/www/htdocs/webmail/logs/userlogins</pre> 
-<p><strong>fail2ban/filter.d/roundcube.conf:</strong></p> 
-<pre>[Definition]
-failregex = FAILED login for .*. from &lt;HOST&gt;
-ignoreregex =</pre> 
-		    <br>
-		    <a id=License name=License></a>
-		    <h2>License</h2> 
-		    <p>This plugin is licensed under the <a href="http://www.gnu.org/licenses/gpl-3.0.txt">GPLv3</a>.  A copy of the license also comes with every copy download.</p> 
-                    <pre>This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.</pre>
-
-		    <br>
-		    <a id=Authors name=Authors></a>
-		    <h2>Authors</h2> 
-		    <p><a href="http://mattrude.com/">Matt Rude</a> &lt;<a href="mailto:m@mattrude.com">m@mattrude.com</a>&gt;<br/></p> 
-		    <br>
-		    <script>
-		      var idcomments_acct = '4f5b5827534ac8f56be532bc26aab3bf';
-		      var idcomments_post_id;
-		      var idcomments_post_url;
-		    </script>
-		    <span id="IDCommentsPostTitle" style="display:none"></span>
-		    <script type='text/javascript' src='http://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
-                </DIV><!-- rightColumn -->
-                <DIV id="endContent"></DIV>
-            </DIV><!-- content -->
-            <DIV id="footer">Copyright &copy; 2009-2011 by <A href="http://mattrude.com/">Matt Rude</A>, All Rights Reserved. <br />
-		<small>last updated: 05-Mar-2011</small></DIV>
-        </DIV><!-- container -->
-    </BODY>
-</HTML>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>mattrude.github.com / Random Image Block plugin for WordPress</title>
+	<link rel="stylesheet" type="text/css" href="./style.css" />
+	<link rel="icon" href="./favicon.ico" type="image/x-icon" />
+</head>
+<body>
+<div id="content">
+	<div id="primary" class="main">
+        <br>
+        <script>
+                var idcomments_acct = '4f5b5827534ac8f56be532bc26aab3bf';
+                var idcomments_post_id;
+                var idcomments_post_url;
+        </script>
+        <span id="IDCommentsPostTitle" style="display:none"></span>
+        <script type='text/javascript' src='http://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+    </div>
+    <div id="footer">
+        <div class="footer-left">
+	    <p><a href='http://mattrude.github.com'>Home</a> | <a href='http://github.com/mattrude/'>Github Project List</a> | <a href='https://github.com/mattrude/rc-plugin-fail2ban'>Source</a></p>
+	</div>
+	<div class="footer-right">
+	    <p>Copyright &copy; 2009 &mdash; 2012 by <a href='http://mattrude.com'>Matt Rude</a></p>
+	</div>
+    </div>
+</div>
+</body>
+</html>
