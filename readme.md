@@ -4,7 +4,7 @@ RoundCube Fail2Ban Plugin is a small plugin that will display a failed login att
 
 If you would like to help translating this plugin, or you see a problem with the current translation, please [contact me][1].
 
-This plugin dose not install or run Fail2Ban, but only provides the program with the needed log entries. Fail2Ban needs to be setup and running independent of this plugin and will watch roundcubes logs for failed logins.</div> 
+This plugin dose not install or run Fail2Ban, but only provides the program with the needed log entries. Fail2Ban needs to be setup and running independent of this plugin and will watch roundcubes logs for failed logins.
 
   
 <a id=Download name=Download></a> 
