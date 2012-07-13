@@ -21,8 +21,6 @@
 
 <p>This plugin dose not install or run Fail2Ban, but only provides the program with the needed log entries. Fail2Ban needs to be setup and running independent of this plugin and will watch roundcubes logs for failed logins.</p>
 
-<p><a id=Download name=Download></a> </p>
-
 <h2>Download</h2>
 
 <p>The Current Version is 1.1 released on June, 19th 2011.</p>
@@ -32,32 +30,28 @@
 <li>RoundCube Fil2Ban Plugin - Version 1.0 - <a href="http://github.com/downloads/mattrude/rc-plugin-fail2ban/roundcube-fail2ban-plugin.1.0.tgz">tgz</a> | <a href="http://github.com/downloads/mattrude/rc-plugin-fail2ban/roundcube-fail2ban-plugin.1.0.zip">zip</a> | <a href="http://github.com/mattrude/rc-plugin-fail2ban/tree/1.0">git</a></li>
 </ul>
 
-<p>You can also clone the project with <a href="http://git-scm.com">Git</a> by running: </p>
+<p>You can also clone the project with <a href="http://git-scm.com">Git</a> by running:</p>
 
-<pre>$ git clone git://github.com/mattrude/rc-plugin-fail2ban.git fail2ban</pre> If your using git, make sure to hit the 
+<pre>$ git clone git://github.com/mattrude/rc-plugin-fail2ban.git fail2ban</pre> 
 
-[rc-Plugin-Fail2Ban's github page][9]. 
+<p>If your using git, make sure to hit the <a href="http://github.com/mattrude/rc-plugin-fail2ban">rc-Plugin-Fail2Ban's github page</a>. </p>
 
+<h2>Dependencies</h2>
 
-<a id=Dependencies name=Dependencies></a> 
-## Dependencies
+<p><a href="http://roundcube.net/">RoundCube</a> 3.0+</p>
 
-[RoundCube][10] 3.0+
+<h2>Installing</h2>
 
+<ol>
+<li>Place this plugin folder into the RoundCube plugins directory (roundcube/plugins/)</li>
+<li>Add fail2ban to $rcmail_config['plugins'] in your RoundCube config</li>
+</ol>
 
-<a id=Install name=Install></a> 
-## Installing
+<p><strong>Note:</strong> When downloading this plugin from <a href="http://github.com/mattrude/rc-plugin-fail2ban">http://github.com/mattrude/rc-plugin-fail2ban</a> you will need to create a directory called fail2ban and place fail2ban.php in there, ignoring the root directory in the downloaded archive. You may also run '<strong>git clone git://github.com/mattrude/rc-plugin-fail2ban.git fail2ban</strong>' from the plugins directory.</p>
 
-1.  Place this plugin folder into the RoundCube plugins directory (roundcube/plugins/)
-2.  Add fail2ban to $rcmail_config['plugins'] in your RoundCube config
+<h2>Setting Up</h2>
 
-**Note:** When downloading this plugin from <http://github.com/mattrude/rc-plugin-fail2ban> you will need to create a directory called fail2ban and place fail2ban.php in there, ignoring the root directory in the downloaded archive. You may also run '**git clone git://github.com/mattrude/rc-plugin-fail2ban.git fail2ban**' from the plugins directory.
-
-
-<a id=Setup name=Setup></a> 
-## Setting Up
-
-**fail2ban/jail.conf:**
+<p><strong>fail2ban/jail.conf:</strong></p>
 
 <pre>[roundcube]
 enabled  = true
@@ -83,8 +77,6 @@ logpath  = /srv/www/htdocs/webmail/logs/userlogins</pre>
 <pre>[Definition]
 failregex = FAILED login for .*. from &lt;HOST&gt;
 ignoreregex =</pre>
-
-<p><a id=License name=License></a> </p>
 
 <h2>License</h2>
 
