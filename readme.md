@@ -7,7 +7,6 @@ If you would like to help translating this plugin, or you see a problem with the
 This plugin dose not install or run Fail2Ban, but only provides the program with the needed log entries. Fail2Ban needs to be setup and running independent of this plugin and will watch roundcubes logs for failed logins.
 
   
-<a id=Download name=Download></a> 
 ## Download
 
 The Current Version is 1.1 released on June, 19th 2011.
@@ -15,19 +14,18 @@ The Current Version is 1.1 released on June, 19th 2011.
 *   RoundCube Fil2Ban Plugin - Version 1.1 - [tgz][2] | [zip][3] | [git][4]
 *   RoundCube Fil2Ban Plugin - Version 1.0 - [tgz][5] | [zip][6] | [git][7]
 
-You can also clone the project with [Git][8] by running: 
-<pre>$ git clone git://github.com/mattrude/rc-plugin-fail2ban.git fail2ban</pre> If your using git, make sure to hit the 
+You can also clone the project with [Git][8] by running:
 
-[rc-Plugin-Fail2Ban's github page][9]. 
+<pre>$ git clone git://github.com/mattrude/rc-plugin-fail2ban.git fail2ban</pre> 
+
+If your using git, make sure to hit the [rc-Plugin-Fail2Ban's github page][9]. 
 
   
-<a id=Dependencies name=Dependencies></a> 
 ## Dependencies
 
 [RoundCube][10] 3.0+
 
-  
-<a id=Install name=Install></a> 
+
 ## Installing
 
 1.  Place this plugin folder into the RoundCube plugins directory (roundcube/plugins/)
@@ -36,7 +34,6 @@ You can also clone the project with [Git][8] by running:
 **Note:** When downloading this plugin from <http://github.com/mattrude/rc-plugin-fail2ban> you will need to create a directory called fail2ban and place fail2ban.php in there, ignoring the root directory in the downloaded archive. You may also run '**git clone git://github.com/mattrude/rc-plugin-fail2ban.git fail2ban**' from the plugins directory.
 
   
-<a id=Setup name=Setup></a> 
 ## Setting Up
 
 **fail2ban/jail.conf:**
@@ -67,7 +64,6 @@ failregex = FAILED login for .*. from &lt;HOST&gt;
 ignoreregex =</pre>
 
   
-<a id=License name=License></a> 
 ## License
 
 This plugin is licensed under the [GPLv3][11]. A copy of the license also comes with every copy download.
