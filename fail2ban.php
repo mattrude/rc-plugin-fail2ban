@@ -16,7 +16,7 @@ class fail2ban extends rcube_plugin
 
   function log($args)
   {
-    $log_entry = 'FAILED login for ' .$args['user']. ' from ' .getenv('REMOTE_ADDR'); 
+    $log_entry = '[roundcube] FAILED login for ' .$args['user']. ' from ' .getenv('REMOTE_ADDR'); 
     $log_config = rcmail::get_instance()->config->get('log_driver');
     
     if ($log_config == 'syslog'){
