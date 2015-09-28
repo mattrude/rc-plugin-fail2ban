@@ -16,13 +16,14 @@ class fail2ban extends rcube_plugin
 
   function log($args)
   {
-    $log_entry = '[roundcube] FAILED login for ' .$args['user']. ' from ' .getenv('REMOTE_ADDR'); 
+    $log_entry = '[roundcube] FAILED login for ' .$args['user']. ' from ' .getenv('REMOTE_ADDR');
     $log_config = rcmail::get_instance()->config->get('log_driver');
-    
+    $log_dir = rcmail::get_instance()->config->get('log_dir');
+
     if ($log_config == 'syslog'){
        syslog(LOG_WARNING, $log_entry);
     } elseif ($log_config == 'file'){
-       error_log('['.date('d-M-Y H:i:s O')."]: ".$log_entry."\n", 3, "logs/userlogins");
+       error_log('['.date('d-M-Y H:i:s O')."]: ".$log_entry."\n", 3, $log_dir."/userlogins");
     } else {
        echo 'WARNING!! The RoundCube Fail2Ban Plugin was unable to retrieve the log driver from the config, please check your config file for log_driver.';
     }
