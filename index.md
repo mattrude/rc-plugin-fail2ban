@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<div class="home">
+
 # RoundCube Fail2Ban Plugin
 
 RoundCube Fail2Ban Plugin is a small plugin that will display a failed login attempts in your syslog or userlogins log file. Using this information [Fail2Ban](http://www.fail2ban.org) will be able to block a user for a set amount of time. The best part, the block is happening at the IP level and blocks the IP address, not the user they are trying to log in as.
