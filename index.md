@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 ---
 
 # RoundCube Fail2Ban Plugin
