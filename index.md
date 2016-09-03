@@ -26,6 +26,7 @@ You can also clone the project with [Git][8] by running:
 
 If your using git, make sure to hit the [rc-Plugin-Fail2Ban's github page][9]. 
 
+{{ site.github.releases }}
   
 ## Dependencies
 
