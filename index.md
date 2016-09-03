@@ -15,10 +15,10 @@ This plugin dose not install or run Fail2Ban, but only provides the program with
 
 The Current Version is 1.3 released on Sept, 28th 2015.
 
-*   RoundCube Fil2Ban Plugin - Version 1.3 - [tgz](https://github.com/mattrude/rc-plugin-fail2ban/archive/1.3.tar.gz) | [zip](https://github.com/mattrude/rc-plugin-fail2ban/archive/1.3.zip) | [git](http://github.com/mattrude/rc-plugin-fail2ban/tree/1.3) 
-*   RoundCube Fil2Ban Plugin - Version 1.2 - [tgz](https://github.com/mattrude/rc-plugin-fail2ban/archive/1.2.tar.gz) | [zip](https://github.com/mattrude/rc-plugin-fail2ban/archive/1.2.zip) | [git](http://github.com/mattrude/rc-plugin-fail2ban/tree/1.2) 
-*   RoundCube Fil2Ban Plugin - Version 1.1 - [tgz][2] | [zip][3] | [git][4]
-*   RoundCube Fil2Ban Plugin - Version 1.0 - [tgz][5] | [zip][6] | [git][7]
+* RoundCube Fil2Ban Plugin - Version 1.3 - [tgz](https://github.com/mattrude/rc-plugin-fail2ban/archive/1.3.tar.gz) | [zip](https://github.com/mattrude/rc-plugin-fail2ban/archive/1.3.zip) | [git](http://github.com/mattrude/rc-plugin-fail2ban/tree/1.3) 
+* RoundCube Fil2Ban Plugin - Version 1.2 - [tgz](https://github.com/mattrude/rc-plugin-fail2ban/archive/1.2.tar.gz) | [zip](https://github.com/mattrude/rc-plugin-fail2ban/archive/1.2.zip) | [git](http://github.com/mattrude/rc-plugin-fail2ban/tree/1.2) 
+* RoundCube Fil2Ban Plugin - Version 1.1 - [tgz][2] | [zip][3] | [git][4]
+* RoundCube Fil2Ban Plugin - Version 1.0 - [tgz][5] | [zip][6] | [git][7]
 
 You can also clone the project with [Git][8] by running:
 
@@ -88,7 +88,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see &lt;http://www.gnu.org/licenses/>.</pre>
 
   
-<a id=Authors name=Authors></a> 
 ## Authors
 
 [Matt Rude][12] (m@mattrude.com)
