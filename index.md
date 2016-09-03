@@ -27,6 +27,12 @@ You can also clone the project with [Git][8] by running:
 If your using git, make sure to hit the [rc-Plugin-Fail2Ban's github page][9]. 
 
 {{ site.github.releases }}
+
+{% for release in site.github.releases %}
+
+{{ release.tag_name }}
+
+{% endfor %}
   
 ## Dependencies
 
@@ -96,7 +102,6 @@ along with this program.  If not, see &lt;http://www.gnu.org/licenses/>.</pre>
 ### Contributors
 
 {% for user in site.github.contributors %}<a href="{{ user.url }}"><img src="{{ user.avatar_url }}&s=16" width="16px" height="16px" /> {{ user.login}}</a>, {% endfor %}
-
 
  [1]: http://mattrude.com/contact-me/
  [2]: http://github.com/downloads/mattrude/rc-plugin-fail2ban/roundcube-fail2ban-plugin.1.1.tgz
