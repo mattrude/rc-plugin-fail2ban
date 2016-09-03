@@ -4,6 +4,9 @@ title: "RoundCube Fail2Ban Plugin"
 author: "Matt Rude"
 description: "A Fail2Ban plugin for RoundCube"
 
+github_username: mattrude
+twitter_username: mdrude
+
 markdown: kramdown
 permalink: pretty
 highlighter: rouge
