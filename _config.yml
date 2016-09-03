@@ -1,5 +1,6 @@
 theme: minima
 baseurl: /rc-plugin-fail2ban
+title: rc-plugin-fail2ban
 description: "A Fail2Ban plugin for RoundCube"
 
 markdown: kramdown
