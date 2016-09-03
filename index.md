@@ -30,7 +30,7 @@ If your using git, make sure to hit the [rc-Plugin-Fail2Ban's github page][9].
 
 {% for release in site.github.releases %}
 
-{{ release.tag_name }}
+{{ release.name }} - <a href="{{ release.tarball_url }}">tgz</a> | <a href="{{ release.zipball_url }}">zip</a>
 
 {% endfor %}
   
