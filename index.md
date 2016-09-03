@@ -16,7 +16,7 @@ This plugin dose not install or run Fail2Ban, but only provides the program with
 The Current Version is 1.3 released on Sept, 28th 2015.
 
 {% for release in site.github.releases %}
-* <a href="{{ release.html_url }}">RoundCube Fil2Ban Plugin {{ release.name }}</a> - <a href="{{ release.tarball_url }}">tgz</a> - <a href="{{ release.zipball_url }}">zip</a>{% endfor %}
+* <a href="{{ release.html_url }}">RoundCube Fil2Ban Plugin {{ release.name }}</a> - <a href="https://github.com/mattrude/rc-plugin-fail2ban/archive/{{ release.tag_name }}.tar.gz">tgz</a> - <a href="https://github.com/mattrude/rc-plugin-fail2ban/archive/{{ release.tag_name }}.zip">zip</a>{% endfor %}
 * [RoundCube Fil2Ban Plugin Release 1.1][2] - [tgz][3] - [zip][4]
 * [RoundCube Fil2Ban Plugin Release 1.0][5] - [tgz][6] - [zip][7]
 
