@@ -16,9 +16,9 @@ This plugin dose not install or run Fail2Ban, but only provides the program with
 The Current Version is 1.3 released on Sept, 28th 2015.
 
 {% for release in site.github.releases %}
-* RoundCube Fil2Ban Plugin {{ release.name }} - <a href="{{ release.tarball_url }}">tgz</a> - <a href="{{ release.zipball_url }}">zip</a>{% endfor %}
-* RoundCube Fil2Ban Plugin Release 1.1 - [tgz][2] - [zip][3] - [git][4]
-* RoundCube Fil2Ban Plugin Release 1.0 - [tgz][5] - [zip][6] - [git][7]
+* <a href="{{ release.html_url }}">RoundCube Fil2Ban Plugin {{ release.name }}</a> - <a href="{{ release.tarball_url }}">tgz</a> - <a href="{{ release.zipball_url }}">zip</a>{% endfor %}
+* [RoundCube Fil2Ban Plugin Release 1.1][2] - [tgz][3] - [zip][4]
+* [RoundCube Fil2Ban Plugin Release 1.0][5] - [tgz][6] - [zip][7]
 
 You can also clone the project with [Git][8] by running:
 
@@ -97,12 +97,12 @@ along with this program.  If not, see &lt;http://www.gnu.org/licenses/>.</pre>
 {% for user in site.github.contributors %}<a href="{{ user.url }}"><img src="{{ user.avatar_url }}&s=16" width="16px" height="16px" /> {{ user.login}}</a>, {% endfor %}
 
  [1]: http://mattrude.com/contact-me/
- [2]: http://github.com/downloads/mattrude/rc-plugin-fail2ban/roundcube-fail2ban-plugin.1.1.tgz
- [3]: http://github.com/downloads/mattrude/rc-plugin-fail2ban/roundcube-fail2ban-plugin.1.1.zip
- [4]: http://github.com/mattrude/rc-plugin-fail2ban/tree/1.1
- [5]: http://github.com/downloads/mattrude/rc-plugin-fail2ban/roundcube-fail2ban-plugin.1.0.tgz
- [6]: http://github.com/downloads/mattrude/rc-plugin-fail2ban/roundcube-fail2ban-plugin.1.0.zip
- [7]: http://github.com/mattrude/rc-plugin-fail2ban/tree/1.0
+ [2]: https://github.com/mattrude/rc-plugin-fail2ban/releases/tag/1.1
+ [3]: http://github.com/downloads/mattrude/rc-plugin-fail2ban/roundcube-fail2ban-plugin.1.1.tgz
+ [4]: http://github.com/downloads/mattrude/rc-plugin-fail2ban/roundcube-fail2ban-plugin.1.1.zip
+ [5]: https://github.com/mattrude/rc-plugin-fail2ban/releases/tag/1.0
+ [6]: http://github.com/downloads/mattrude/rc-plugin-fail2ban/roundcube-fail2ban-plugin.1.0.tgz
+ [7]: http://github.com/downloads/mattrude/rc-plugin-fail2ban/roundcube-fail2ban-plugin.1.0.zip
  [8]: http://git-scm.com
  [9]: http://github.com/mattrude/rc-plugin-fail2ban
  [10]: http://roundcube.net/
