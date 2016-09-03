@@ -94,13 +94,10 @@ along with this program.  If not, see &lt;http://www.gnu.org/licenses/>.</pre>
 
 ### Contributors
 
-{% for user in site.github.contributors %}
-<a href="{{ user.url }}"><img src="{{ user.avatar_url }}&s=16" width="16px" height="16px" /> {{ user.login}}</a>, 
-{% endfor %}
+{% for user in site.github.contributors %}<a href="{{ user.url }}"><img src="{{ user.avatar_url }}&s=16" width="16px" height="16px" /> {{ user.login}}</a>, {% endfor %}
 
 ----
 
-{{ site.github.contributors }}
 
  [1]: http://mattrude.com/contact-me/
  [2]: http://github.com/downloads/mattrude/rc-plugin-fail2ban/roundcube-fail2ban-plugin.1.1.tgz
