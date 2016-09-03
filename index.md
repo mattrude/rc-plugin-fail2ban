@@ -95,7 +95,7 @@ along with this program.  If not, see &lt;http://www.gnu.org/licenses/>.</pre>
 ### Contributors
 
 {% for user in site.github.contributors %}
-<a href="{{ user.url }}"><img src="{{ user.avatar_url }}?size=16px" size="16px" /> {{ user.login}}</a>, 
+<a href="{{ user.url }}"><img src="{{ user.avatar_url }}&size=16px" size="16px" /> {{ user.login}}</a>, 
 {% endfor %}
 
 ----
