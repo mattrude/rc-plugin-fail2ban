@@ -4,7 +4,6 @@ title: rc-plugin-fail2ban
 email: m@mattrude.com
 author: Matt Rude
 description: "A Fail2Ban plugin for RoundCube"
-github_username:  mattrude
 
 markdown: kramdown
 permalink: pretty
