@@ -37,8 +37,9 @@ If your using git, make sure to hit the [rc-Plugin-Fail2Ban's github page][9].
 1. Place this plugin folder into the RoundCube plugins directory (roundcube/plugins/)
 2. Add `fail2ban` to `$rcmail_config['plugins']` in your RoundCube config
 
-**Note:** When downloading this plugin from <http://github.com/mattrude/rc-plugin-fail2ban> you will need to create a directory called fail2ban and place fail2ban.php in there, ignoring the root directory in the downloaded archive. You may also run '**git clone git://github.com/mattrude/rc-plugin-fail2ban.git fail2ban**' from the plugins directory.
+**Note:** When downloading this plugin from <http://github.com/mattrude/rc-plugin-fail2ban> you will need to create a directory called fail2ban and place fail2ban.php in there, ignoring the root directory in the downloaded archive.
 
+You may also run `git clone git://github.com/mattrude/rc-plugin-fail2ban.git fail2ban` from the plugins directory.
   
 ## Setting Up
 
