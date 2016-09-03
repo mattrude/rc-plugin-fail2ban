@@ -1,6 +1,6 @@
 theme: minima
 baseurl: /rc-plugin-fail2ban
-title: rc-plugin-fail2ban
+title: "RoundCube Fail2Ban Plugin"
 author: "Matt Rude"
 description: "A Fail2Ban plugin for RoundCube"
 
