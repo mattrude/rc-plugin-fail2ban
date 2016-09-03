@@ -88,14 +88,9 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see &lt;http://www.gnu.org/licenses/>.</pre>
 
-  
-## Authors
+## Contributors
 
-[Matt Rude][12] (m@mattrude.com)
-
-### Contributors
-
-{% for user in site.github.contributors %}<a href="{{ user.url }}"><img src="{{ user.avatar_url }}&s=16" width="16px" height="16px" /> {{ user.login}}</a>, {% endfor %}
+{% for user in site.github.contributors %}<a href="{{ user.html_url }}"><img src="{{ user.avatar_url }}&s=16" width="16px" height="16px" /> {{ user.login }}</a>, {% endfor %}
 
  [1]: http://mattrude.com/contact-me/
  [2]: https://github.com/mattrude/rc-plugin-fail2ban/releases/tag/1.1
