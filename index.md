@@ -107,5 +107,5 @@ along with this program.  If not, see &lt;http://www.gnu.org/licenses/>.</pre>
  [8]: http://git-scm.com
  [9]: http://github.com/mattrude/rc-plugin-fail2ban
  [10]: http://roundcube.net/
- [11]: https://raw.githubusercontent.com/mattrude/rc-plugin-fail2ban/master/LICENSE
+ [11]: https://raw.githubusercontent.com/{{ site.github.repository_nwo }}/master/LICENSE
  [12]: http://mattrude.com/
